@@ -18,6 +18,8 @@ func main() {
 	// routes
 	app.Get("/movies",handlers.GetMovies)
 	app.Post("/movies",handlers.CreateMovie)
+	app.Get("/movies/:id",handlers.FindMovie)
+	app.Put("/movies/:id",handlers.UpdateMovie)
 
 	app.Listen(":9000")
 	}
